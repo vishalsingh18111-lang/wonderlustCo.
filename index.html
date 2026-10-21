@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Wanderlust Co. India</title>
+<meta name="description" content="Book flights, hotels, trains, buses, cabs and holiday packages across India and abroad. Explore destinations, festivals and weekend getaways with Wanderlust Co.">
+<meta name="theme-color" content="#123832">
+<meta property="og:title" content="Wanderlust Co. — Flights, Hotels, Trains & Holidays">
+<meta property="og:description" content="One place to plan and book every part of your Indian holiday.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23123832'/%3E%3Cpath d='M20 58l60-22-14 30-12-8-8 12-2-14z' fill='%23F29A1F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Mukta:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Tiro+Devanagari+Hindi&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAgency","name":"Wanderlust Co.","areaServed":"IN","currenciesAccepted":"INR","paymentAccepted":"UPI, Credit Card, Debit Card, Net Banking"}</script>
+</head>
+<body>
+
+<!-- ============================= ICON SPRITE ============================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="M2.5 13.5l7-1.5 4.5-7.5c.6-1 2.3-1.3 2.9-.7.6.6.3 2.3-.7 2.9L9.8 12l-1.6 7-2 .5-.4-5.3-3.8-.2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M13 13.5l2.5 6.5 2-.5-.6-8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-hotel" viewBox="0 0 24 24"><path d="M3 21V5a2 2 0 012-2h9a2 2 0 012 2v16M16 9h3a2 2 0 012 2v10M2 21h20M7 7h2M11 7h1M7 11h2M11 11h1M7 15h2M11 15h1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-train" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 10h14M8 21l2-4M16 21l-2-4M9 14h.01M15 14h.01" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-bus" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 11h18M7 17v3M17 17v3M7 14h.01M17 14h.01" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 16V11l2-5h10l2 5v5M3 16h18v3H3zM5 11h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="19" r="1.5" fill="currentColor"/><circle cx="16.5" cy="19" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-palm" viewBox="0 0 24 24"><path d="M12 21c0-5 .5-9 1.5-12M13.5 9C11 6 7 6 4 8c3 0 6 .5 9.5 1zM13.5 9c1-3.5 4-5 7-4.5-2.5 1-5 2.5-7 4.5zM13.5 9c3 0 5.5 1.5 6.5 4.5-2.5-1.5-4.5-2.8-6.5-4.5zM3 21h18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-passport" viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="3.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 17h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-forex" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="2.8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6 9.5v5M18 9.5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.5l8 3.5v6c0 5-3.5 8.5-8 9.5-4.5-1-8-4.5-8-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M7 4L3 8l4 4M3 8h14M17 20l4-4-4-4M21 16H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5s-8-4.8-8-11A4.5 4.5 0 0112 7a4.5 4.5 0 018 2.5c0 6.2-8 11-8 11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 12h18" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 2 .7 3a2 2 0 01-.4 2.1L8 10.5a16 16 0 006 6l1.7-1.4a2 2 0 012.1-.4c1 .4 2 .6 3 .7a2 2 0 011.7 2z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1121 12z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 011-1h8l9 9-9 9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 8v13M12 8S10.5 3 8 3.5 7 8 12 8zM12 8s1.5-5 4-4.5S17 8 12 8z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.8-4.6 4.4 1.2 6.3L12 17l-5.7 3.1 1.2-6.3L2.9 9.4l6.3-.8z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================= HEADER ============================= -->
+<header class="site-header" id="header">
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="topbar-note"><svg class="ic"><use href="#i-phone"/></svg> <span data-i18n="support">24×7 support</span>: <strong class="mono">+91 74609 62727</strong></span>
+      <div class="topbar-controls">
+        <label class="mini-select" for="langSelect"><span class="sr-only">Language</span>
+          <select id="langSelect"><option value="en">English</option><option value="hi">हिन्दी</option></select>
+        </label>
+        <label class="mini-select" for="currencySelect"><span class="sr-only">Currency</span>
+          <select id="currencySelect"><option value="INR">₹ INR</option><option value="USD">$ USD</option></select>
+        </label>
+        <button class="icon-btn" id="themeToggle" aria-label="Switch colour theme"><svg class="ic"><use href="#i-moon"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar container" aria-label="Main">
+    <a href="#home" class="logo" aria-label="Wanderlust Co. home"><span class="mark" aria-hidden="true"><svg class="ic"><use href="#i-plane"/></svg></span><span>Wanderlust<span class="logo-co">Co.</span></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#explore" class="nav-link" data-i18n="nav_explore">Explore India</a></li>
+      <li><a href="#holidays" class="nav-link" data-i18n="nav_holidays">Holidays</a></li>
+      <li><a href="#offers" class="nav-link" data-i18n="nav_offers">Offers</a></li>
+      <li><a href="#festivals" class="nav-link" data-i18n="nav_festivals">Festivals</a></li>
+      <li><a href="#tools" class="nav-link" data-i18n="nav_tools">Travel tools</a></li>
+      <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-pill" id="wishlistBtn" aria-label="Wishlist"><svg class="ic"><use href="#i-heart"/></svg><span class="badge" id="wishCount" hidden>0</span></button>
+      <button class="nav-pill" id="tripsBtn"><svg class="ic"><use href="#i-bag"/></svg><span class="hide-sm" data-i18n="my_trips">My Trips</span></button>
+      <button class="btn btn-accent btn-sm" id="loginBtn"><svg class="ic"><use href="#i-user"/></svg><span id="loginLabel" data-i18n="login">Login / Sign up</span></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="toran" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<!-- ============================= HERO + SEARCH ============================= -->
+<section class="hero" id="home">
+  <div class="hero-scene" aria-hidden="true">
+    <svg viewBox="0 0 1200 520" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="gradHero" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#E1572B"/><stop offset="42%" stop-color="#F29A1F"/><stop offset="100%" stop-color="#123832"/>
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="520" fill="url(#gradHero)"/>
+      <circle cx="930" cy="170" r="80" fill="#FBF7EC" opacity=".85"/>
+      <path d="M0,300 L120,190 L210,260 L330,140 L460,270 L560,210 L680,300 V520 H0Z" fill="#1B4B43" opacity=".55"/>
+      <path d="M0,360 Q260,300 520,350 T1200,330 V520 H0 Z" fill="#1B4B43" opacity=".9"/>
+      <!-- Taj-like dome silhouette, minaret, temple shikhara, India Gate arch -->
+      <g fill="#0E2B26">
+        <rect x="160" y="330" width="8" height="90"/><circle cx="164" cy="326" r="7"/>
+        <rect x="320" y="330" width="8" height="90"/><circle cx="324" cy="326" r="7"/>
+        <path d="M190,420 V360 H300 V420Z"/><path d="M205,360 Q245,280 285,360Z"/><rect x="243" y="290" width="4" height="16"/>
+        <path d="M720,420 L740,330 L760,300 L780,330 L800,420Z"/><rect x="757" y="282" width="6" height="20"/>
+        <path d="M960,420 V340 H1060 V420 H1035 V375 Q1010,350 985,375 V420Z"/><rect x="955" y="332" width="110" height="10"/>
+      </g>
+      <path d="M0,420 Q300,380 600,410 T1200,400 V520 H0 Z" fill="#123832"/>
+      <path d="M90,150 C160,110 210,120 260,90" stroke="#FBF7EC" stroke-width="3" fill="none" opacity=".55" stroke-dasharray="2 10" stroke-linecap="round"/>
+      <path d="M262,86 l22,-4 l-12,16Z" fill="#FBF7EC" opacity=".8"/>
+    </svg>
+  </div>
+  <div class="hero-slides" id="heroSlides" aria-hidden="true">
+    <img class="hero-photo active" src="hero.jpg" alt="" data-cap="Taj Mahal, Agra">
+    <img class="hero-photo" data-src="img/hero/jaipur.webp" alt="" data-cap="Hawa Mahal, Jaipur">
+    <img class="hero-photo" data-src="img/hero/kerala.webp" alt="" data-cap="Backwaters, Kerala">
+    <img class="hero-photo" data-src="img/hero/kashmir.webp" alt="" data-cap="Dal Lake, Srinagar">
+    <img class="hero-photo" data-src="img/hero/amritsar.webp" alt="" data-cap="Golden Temple, Amritsar">
+    <img class="hero-photo" data-src="img/hero/varanasi.webp" alt="" data-cap="Ghats of Varanasi">
+    <img class="hero-photo" data-src="img/hero/goa.webp" alt="" data-cap="Palolem Beach, Goa">
+  </div>
+  <p class="hero-cap" id="heroCap" aria-hidden="true"><svg class="ic"><use href="#i-pin"/></svg><span>Taj Mahal, Agra</span></p>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="eyebrow on-dark" data-i18n="hero_eyebrow">Flights · Hotels · Trains · Buses · Holidays</p>
+    <h1 data-i18n-html="hero_title">Kashmir se Kanyakumari, <em>sab ek jagah</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Book every leg of your Indian holiday in one place, from the Tatkal train to the houseboat, with honest prices and GST invoices.</p>
+  </div>
+
+  <!-- ===== Search widget ===== -->
+  <div class="container">
+  <div class="search-panel" id="searchPanel">
+    <div class="tabs-scroll">
+      <div class="search-tabs" role="tablist" aria-label="What do you want to book?">
+        <button role="tab" class="s-tab active" data-tab="flights" aria-selected="true" id="tab-flights" aria-controls="pane-flights"><svg class="ic"><use href="#i-plane"/></svg><span data-i18n="tab_flights">Flights</span></button>
+        <button role="tab" class="s-tab" data-tab="hotels" aria-selected="false" id="tab-hotels" aria-controls="pane-hotels"><svg class="ic"><use href="#i-hotel"/></svg><span data-i18n="tab_hotels">Hotels</span></button>
+        <button role="tab" class="s-tab" data-tab="trains" aria-selected="false" id="tab-trains" aria-controls="pane-trains"><svg class="ic"><use href="#i-train"/></svg><span data-i18n="tab_trains">Trains</span></button>
+        <button role="tab" class="s-tab" data-tab="buses" aria-selected="false" id="tab-buses" aria-controls="pane-buses"><svg class="ic"><use href="#i-bus"/></svg><span data-i18n="tab_buses">Buses</span></button>
+        <button role="tab" class="s-tab" data-tab="cabs" aria-selected="false" id="tab-cabs" aria-controls="pane-cabs"><svg class="ic"><use href="#i-car"/></svg><span data-i18n="tab_cabs">Cabs</span></button>
+        <button role="tab" class="s-tab" data-tab="holidays" aria-selected="false" id="tab-holidays" aria-controls="pane-holidays"><svg class="ic"><use href="#i-palm"/></svg><span data-i18n="tab_holidays">Holidays</span></button>
+        <button role="tab" class="s-tab" data-tab="visa" aria-selected="false" id="tab-visa" aria-controls="pane-visa"><svg class="ic"><use href="#i-passport"/></svg><span data-i18n="tab_visa">Visa</span></button>
+        <button role="tab" class="s-tab" data-tab="forex" aria-selected="false" id="tab-forex" aria-controls="pane-forex"><svg class="ic"><use href="#i-forex"/></svg><span data-i18n="tab_forex">Forex</span></button>
+        <button role="tab" class="s-tab" data-tab="insurance" aria-selected="false" id="tab-insurance" aria-controls="pane-insurance"><svg class="ic"><use href="#i-shield"/></svg><span data-i18n="tab_insurance">Insurance</span></button>
+      </div>
+    </div>
+
+    <!-- FLIGHTS -->
+    <form class="s-pane active" id="pane-flights" role="tabpanel" aria-labelledby="tab-flights" novalidate>
+      <div class="radio-row" role="radiogroup" aria-label="Trip type">
+        <label class="radio-chip"><input type="radio" name="ftrip" value="oneway" checked><span data-i18n="oneway">One way</span></label>
+        <label class="radio-chip"><input type="radio" name="ftrip" value="round"><span data-i18n="round">Round trip</span></label>
+      </div>
+      <div class="fields fields-flight">
+        <div class="field"><label for="fFrom" data-i18n="from">From</label><input id="fFrom" list="airportList" autocomplete="off" value="Delhi (DEL)" placeholder="City or airport"><span class="hint" id="fFromHint">Indira Gandhi Intl</span></div>
+        <button type="button" class="swap-btn" data-swap="fFrom,fTo" aria-label="Swap origin and destination"><svg class="ic"><use href="#i-swap"/></svg></button>
+        <div class="field"><label for="fTo" data-i18n="to">To</label><input id="fTo" list="airportList" autocomplete="off" value="Goa (GOI)" placeholder="City or airport"><span class="hint" id="fToHint">Goa (Dabolim)</span></div>
+        <div class="field"><label for="fDepart" data-i18n="depart">Departure</label><input type="date" id="fDepart"></div>
+        <div class="field"><label for="fReturn" data-i18n="return">Return</label><input type="date" id="fReturn" disabled><span class="hint" data-i18n="return_hint">Tap to add a return</span></div>
+        <div class="field pop-field"><span class="label-like" id="fPaxLabel" data-i18n="travellers_class">Travellers &amp; class</span>
+          <button type="button" class="pop-trigger" id="fPaxBtn" aria-haspopup="dialog" aria-expanded="false" aria-describedby="fPaxLabel">1 Traveller · Economy</button>
+          <div class="popover" id="fPaxPop" role="dialog" aria-label="Travellers and class" hidden>
+            <div class="pop-row"><div><strong>Adults</strong><small>12+ yrs</small></div><div class="stepper" data-min="1" data-max="9"><button type="button" class="step-btn" data-step="-1" aria-label="Fewer adults">−</button><output id="fAdults">1</output><button type="button" class="step-btn" data-step="1" aria-label="More adults">+</button></div></div>
+            <div class="pop-row"><div><strong>Children</strong><small>2–12 yrs</small></div><div class="stepper" data-min="0" data-max="6"><button type="button" class="step-btn" data-step="-1" aria-label="Fewer children">−</button><output id="fChildren">0</output><button type="button" class="step-btn" data-step="1" aria-label="More children">+</button></div></div>
+            <div class="pop-row"><div><strong>Infants</strong><small>Under 2 yrs</small></div><div class="stepper" data-min="0" data-max="4"><button type="button" class="step-btn" data-step="-1" aria-label="Fewer infants">−</button><output id="fInfants">0</output><button type="button" class="step-btn" data-step="1" aria-label="More infants">+</button></div></div>
+            <fieldset class="pop-class"><legend>Cabin class</legend>
+              <label><input type="radio" name="fclass" value="Economy" checked> Economy</label>
+              <label><input type="radio" name="fclass" value="Premium Economy"> Premium Economy</label>
+              <label><input type="radio" name="fclass" value="Business"> Business</label>
+              <label><input type="radio" name="fclass" value="First"> First</label>
+            </fieldset>
+            <button type="button" class="btn btn-ink btn-sm pop-done">Done</button>
+          </div>
+        </div>
+      </div>
+      <div class="pane-foot">
+        <div class="fare-chips" role="radiogroup" aria-label="Special fares">
+          <span class="chip-label" data-i18n="special_fares">Special fares</span>
+          <label class="chip"><input type="radio" name="ffare" value="Regular" checked><span>Regular</span></label>
+          <label class="chip"><input type="radio" name="ffare" value="Student"><span>Student</span></label>
+          <label class="chip"><input type="radio" name="ffare" value="Senior Citizen"><span>Senior Citizen</span></label>
+          <label class="chip"><input type="radio" name="ffare" value="Armed Forces"><span>Armed Forces</span></label>
+          <label class="chip"><input type="radio" name="ffare" value="Doctors & Nurses"><span>Doctors &amp; Nurses</span></label>
+        </div>
+        <button type="submit" class="btn btn-accent search-btn"><svg class="ic"><use href="#i-search"/></svg><span data-i18n="search_flights">Search flights</span></button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+
+    <!-- HOTELS -->
+    <form class="s-pane" id="pane-hotels" role="tabpanel" aria-labelledby="tab-hotels" novalidate hidden>
+      <div class="fields fields-hotel">
+        <div class="field"><label for="hCity" data-i18n="city_property">City, area or property</label><input id="hCity" list="cityList" autocomplete="off" value="Jaipur" placeholder="e.g. Udaipur"></div>
+        <div class="field"><label for="hIn" data-i18n="checkin">Check-in</label><input type="date" id="hIn"></div>
+        <div class="field"><label for="hOut" data-i18n="checkout">Check-out</label><input type="date" id="hOut"></div>
+        <div class="field pop-field"><span class="label-like" id="hGuestLabel" data-i18n="rooms_guests">Rooms &amp; guests</span>
+          <button type="button" class="pop-trigger" id="hGuestBtn" aria-haspopup="dialog" aria-expanded="false" aria-describedby="hGuestLabel">1 Room · 2 Adults</button>
+          <div class="popover" id="hGuestPop" role="dialog" aria-label="Rooms and guests" hidden>
+            <div class="pop-row"><div><strong>Rooms</strong></div><div class="stepper" data-min="1" data-max="8"><button type="button" class="step-btn" data-step="-1" aria-label="Fewer rooms">−</button><output id="hRooms">1</output><button type="button" class="step-btn" data-step="1" aria-label="More rooms">+</button></div></div>
+            <div class="pop-row"><div><strong>Adults</strong></div><div class="stepper" data-min="1" data-max="24"><button type="button" class="step-btn" data-step="-1" aria-label="Fewer adults">−</button><output id="hAdults">2</output><button type="button" class="step-btn" data-step="1" aria-label="More adults">+</button></div></div>
+            <div class="pop-row"><div><strong>Children</strong><small>0–12 yrs</small></div><div class="stepper" data-min="0" data-max="8"><button type="button" class="step-btn" data-step="-1" aria-label="Fewer children">−</button><output id="hChildren">0</output><button type="button" class="step-btn" data-step="1" aria-label="More children">+</button></div></div>
+            <button type="button" class="btn btn-ink btn-sm pop-done">Done</button>
+          </div>
+        </div>
+        <div class="field"><label for="hPrice" data-i18n="price_night">Price per night</label>
+          <select id="hPrice"><option value="0-99999">Any price</option><option value="0-1500">Under ₹1,500</option><option value="1500-3000">₹1,500 – ₹3,000</option><option value="3000-6000">₹3,000 – ₹6,000</option><option value="6000-99999">₹6,000+</option></select>
+        </div>
+      </div>
+      <div class="pane-foot">
+        <div class="fare-chips"><span class="chip-label">Looking for</span>
+          <label class="chip"><input type="checkbox" name="htype" value="Homestay"><span>Homestays</span></label>
+          <label class="chip"><input type="checkbox" name="htype" value="Villa"><span>Villas</span></label>
+          <label class="chip"><input type="checkbox" name="htype" value="Heritage"><span>Heritage havelis</span></label>
+          <label class="chip"><input type="checkbox" name="htag" value="Couple friendly"><span>Couple friendly</span></label>
+        </div>
+        <button type="submit" class="btn btn-accent search-btn"><svg class="ic"><use href="#i-search"/></svg><span data-i18n="search_hotels">Search hotels</span></button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+
+    <!-- TRAINS -->
+    <form class="s-pane" id="pane-trains" role="tabpanel" aria-labelledby="tab-trains" novalidate hidden>
+      <div class="fields fields-train">
+        <div class="field"><label for="tFrom" data-i18n="from">From</label><input id="tFrom" list="stationList" autocomplete="off" value="New Delhi (NDLS)" placeholder="Station"></div>
+        <button type="button" class="swap-btn" data-swap="tFrom,tTo" aria-label="Swap stations"><svg class="ic"><use href="#i-swap"/></svg></button>
+        <div class="field"><label for="tTo" data-i18n="to">To</label><input id="tTo" list="stationList" autocomplete="off" value="Varanasi Jn (BSB)" placeholder="Station"></div>
+        <div class="field"><label for="tDate" data-i18n="journey_date">Journey date</label><input type="date" id="tDate"></div>
+        <div class="field"><label for="tClass" data-i18n="class">Class</label>
+          <select id="tClass"><option value="ALL">All classes</option><option value="SL">Sleeper (SL)</option><option value="3E">AC 3 Economy (3E)</option><option value="3A">AC 3 Tier (3A)</option><option value="2A">AC 2 Tier (2A)</option><option value="1A">AC First Class (1A)</option><option value="CC">AC Chair Car (CC)</option><option value="EC">Executive Chair (EC)</option></select>
+        </div>
+        <div class="field"><label for="tQuota" data-i18n="quota">Quota</label>
+          <select id="tQuota"><option>General</option><option>Tatkal</option><option>Ladies</option><option>Senior Citizen / Lower berth</option></select>
+        </div>
+      </div>
+      <div class="pane-foot">
+        <div class="fare-chips">
+          <button type="button" class="link-chip" data-open="pnr"><svg class="ic"><use href="#i-search"/></svg> <span data-i18n="check_pnr">Check PNR status</span></button>
+          <label class="chip"><input type="checkbox" id="tFlexible"><span>Flexible with date (±1 day)</span></label>
+        </div>
+        <button type="submit" class="btn btn-accent search-btn"><svg class="ic"><use href="#i-search"/></svg><span data-i18n="search_trains">Search trains</span></button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+
+    <!-- BUSES -->
+    <form class="s-pane" id="pane-buses" role="tabpanel" aria-labelledby="tab-buses" novalidate hidden>
+      <div class="fields fields-bus">
+        <div class="field"><label for="bFrom" data-i18n="from">From</label><input id="bFrom" list="cityList" autocomplete="off" value="Bengaluru" placeholder="City"></div>
+        <button type="button" class="swap-btn" data-swap="bFrom,bTo" aria-label="Swap cities"><svg class="ic"><use href="#i-swap"/></svg></button>
+        <div class="field"><label for="bTo" data-i18n="to">To</label><input id="bTo" list="cityList" autocomplete="off" value="Goa" placeholder="City"></div>
+        <div class="field"><label for="bDate" data-i18n="journey_date">Journey date</label><input type="date" id="bDate"></div>
+      </div>
+      <div class="pane-foot">
+        <div class="fare-chips"><span class="chip-label">Quick pick</span>
+          <button type="button" class="link-chip" data-date-for="bDate" data-offset="0">Today</button>
+          <button type="button" class="link-chip" data-date-for="bDate" data-offset="1">Tomorrow</button>
+          <label class="chip"><input type="checkbox" id="bLadies"><span>Booking for women</span></label>
+        </div>
+        <button type="submit" class="btn btn-accent search-btn"><svg class="ic"><use href="#i-search"/></svg><span data-i18n="search_buses">Search buses</span></button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+
+    <!-- CABS -->
+    <form class="s-pane" id="pane-cabs" role="tabpanel" aria-labelledby="tab-cabs" novalidate hidden>
+      <div class="radio-row" role="radiogroup" aria-label="Cab type">
+        <label class="radio-chip"><input type="radio" name="ctype" value="oneway" checked><span>Outstation one-way</span></label>
+        <label class="radio-chip"><input type="radio" name="ctype" value="round"><span>Outstation round trip</span></label>
+        <label class="radio-chip"><input type="radio" name="ctype" value="airport"><span>Airport transfer</span></label>
+        <label class="radio-chip"><input type="radio" name="ctype" value="rental"><span>Hourly rental</span></label>
+      </div>
+      <div class="fields fields-cab">
+        <div class="field"><label for="cFrom" id="cFromLabel">Pick-up city</label><input id="cFrom" list="cityList" autocomplete="off" value="Delhi"></div>
+        <div class="field" id="cToWrap"><label for="cTo">Drop city</label><input id="cTo" list="cityList" autocomplete="off" value="Agra"></div>
+        <div class="field" id="cAirWrap" hidden><label for="cAirDir">Transfer</label><select id="cAirDir"><option value="to">To the airport</option><option value="from">From the airport</option></select></div>
+        <div class="field" id="cPkgWrap" hidden><label for="cPkg">Package</label><select id="cPkg"><option value="4">4 hrs / 40 km</option><option value="8" selected>8 hrs / 80 km</option><option value="12">12 hrs / 120 km</option></select></div>
+        <div class="field"><label for="cDate">Pick-up date</label><input type="date" id="cDate"></div>
+        <div class="field"><label for="cTime">Pick-up time</label><input type="time" id="cTime" value="07:00"></div>
+        <div class="field" id="cRetWrap" hidden><label for="cRet">Return date</label><input type="date" id="cRet"></div>
+      </div>
+      <div class="pane-foot">
+        <p class="pane-note">Fares include driver allowance and GST. Tolls, parking and state permits are paid at actuals.</p>
+        <button type="submit" class="btn btn-accent search-btn"><svg class="ic"><use href="#i-search"/></svg><span data-i18n="search_cabs">Search cabs</span></button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+
+    <!-- HOLIDAYS -->
+    <form class="s-pane" id="pane-holidays" role="tabpanel" aria-labelledby="tab-holidays" novalidate hidden>
+      <div class="fields fields-holiday">
+        <div class="field"><label for="pDest">Destination or theme</label><input id="pDest" list="holidayList" autocomplete="off" placeholder="Kashmir, honeymoon, Char Dham…"></div>
+        <div class="field"><label for="pFromCity">Starting city</label><input id="pFromCity" list="cityList" autocomplete="off" value="Delhi"></div>
+        <div class="field"><label for="pMonth">Month of travel</label><select id="pMonth"></select></div>
+        <div class="field"><label for="pNights">Duration</label><select id="pNights"><option value="0-99">Any</option><option value="1-3">Up to 3 nights</option><option value="4-5">4–5 nights</option><option value="6-8">6–8 nights</option><option value="9-99">9+ nights</option></select></div>
+        <div class="field"><label for="pBudget">Budget per person</label><select id="pBudget"><option value="0-9999999">Any</option><option value="0-15000">Under ₹15,000</option><option value="15000-30000">₹15,000 – ₹30,000</option><option value="30000-60000">₹30,000 – ₹60,000</option><option value="60000-9999999">₹60,000+</option></select></div>
+      </div>
+      <div class="pane-foot">
+        <p class="pane-note">Every package can be customised. Prices are per person on twin sharing.</p>
+        <button type="submit" class="btn btn-accent search-btn"><svg class="ic"><use href="#i-search"/></svg><span data-i18n="find_packages">Find packages</span></button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+
+    <!-- VISA -->
+    <form class="s-pane" id="pane-visa" role="tabpanel" aria-labelledby="tab-visa" novalidate hidden>
+      <div class="fields fields-visa">
+        <div class="field"><label for="vCountry">Country</label><select id="vCountry"><option>United Arab Emirates</option><option>Thailand</option><option>Singapore</option><option>Malaysia</option><option>Indonesia (Bali)</option><option>Sri Lanka</option><option>Vietnam</option><option>United Kingdom</option><option>Schengen (Europe)</option><option>United States</option><option>Australia</option><option>Japan</option></select></div>
+        <div class="field"><label for="vPurpose">Purpose</label><select id="vPurpose"><option>Tourist</option><option>Business</option><option>Visiting family</option></select></div>
+        <div class="field"><label for="vDate">Travel date</label><input type="date" id="vDate"></div>
+        <div class="field"><label for="vPax">Travellers</label><input type="number" id="vPax" min="1" max="20" value="2"></div>
+      </div>
+      <div class="pane-foot">
+        <p class="pane-note">Visa rules change often. Our visa desk confirms current requirements before you apply.</p>
+        <button type="submit" class="btn btn-accent search-btn"><svg class="ic"><use href="#i-passport"/></svg><span>Get checklist</span></button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+
+    <!-- FOREX -->
+    <form class="s-pane" id="pane-forex" role="tabpanel" aria-labelledby="tab-forex" novalidate hidden>
+      <div class="radio-row" role="radiogroup" aria-label="Buy or sell">
+        <label class="radio-chip"><input type="radio" name="xdir" value="buy" checked><span>Buy forex</span></label>
+        <label class="radio-chip"><input type="radio" name="xdir" value="sell"><span>Sell forex</span></label>
+      </div>
+      <div class="fields fields-forex">
+        <div class="field"><label for="xCur">Currency</label><select id="xCur"></select></div>
+        <div class="field"><label for="xProd">Product</label><select id="xProd"><option value="card">Multi-currency forex card</option><option value="cash">Currency notes</option></select></div>
+        <div class="field"><label for="xAmt">Amount (foreign currency)</label><input type="number" id="xAmt" min="1" value="500"></div>
+        <div class="field"><label for="xCity">Delivery city</label><input id="xCity" list="cityList" value="Mumbai"></div>
+      </div>
+      <div class="pane-foot">
+        <p class="pane-note" id="xLive">Indicative rate — locked when you place the order.</p>
+        <button type="submit" class="btn btn-accent search-btn"><svg class="ic"><use href="#i-forex"/></svg><span>Get quote</span></button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+
+    <!-- INSURANCE -->
+    <form class="s-pane" id="pane-insurance" role="tabpanel" aria-labelledby="tab-insurance" novalidate hidden>
+      <div class="radio-row" role="radiogroup" aria-label="Trip type">
+        <label class="radio-chip"><input type="radio" name="iscope" value="domestic"><span>Domestic</span></label>
+        <label class="radio-chip"><input type="radio" name="iscope" value="intl" checked><span>International</span></label>
+      </div>
+      <div class="fields fields-ins">
+        <div class="field"><label for="iRegion">Destination region</label><select id="iRegion"><option value="asia">Asia (excl. Japan)</option><option value="schengen">Schengen / Europe</option><option value="usa">USA &amp; Canada</option><option value="world">Worldwide</option></select></div>
+        <div class="field"><label for="iStart">Trip starts</label><input type="date" id="iStart"></div>
+        <div class="field"><label for="iEnd">Trip ends</label><input type="date" id="iEnd"></div>
+        <div class="field"><label for="iAges">Traveller ages</label><input id="iAges" value="34, 31" placeholder="e.g. 34, 31, 6"></div>
+      </div>
+      <div class="pane-foot">
+        <p class="pane-note">Compare plans covering medical emergencies, trip delays and lost baggage.</p>
+        <button type="submit" class="btn btn-accent search-btn"><svg class="ic"><use href="#i-shield"/></svg><span>Compare plans</span></button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+
+    <div class="recent" id="recentSearches" hidden>
+      <span class="chip-label" data-i18n="recent">Recent searches</span>
+      <div class="recent-list" id="recentList"></div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ============================= TRUST STRIP ============================= -->
+<section class="trust" aria-label="Why book with us">
+  <div class="container trust-grid">
+    <div class="trust-item"><svg class="ic"><use href="#i-clock"/></svg><div><strong data-i18n="trust1">24×7 support</strong><span data-i18n="trust1s">Call, chat or WhatsApp, in Hindi or English</span></div></div>
+    <div class="trust-item"><svg class="ic"><use href="#i-shield"/></svg><div><strong data-i18n="trust2">Secure payments</strong><span data-i18n="trust2s">UPI, cards, net banking &amp; EMI</span></div></div>
+    <div class="trust-item"><svg class="ic"><use href="#i-tag"/></svg><div><strong data-i18n="trust3">No hidden charges</strong><span data-i18n="trust3s">Full fare and GST shown before you pay</span></div></div>
+    <div class="trust-item"><svg class="ic"><use href="#i-gift"/></svg><div><strong data-i18n="trust4">WL Coins on every trip</strong><span data-i18n="trust4s">Earn 2% back, redeem on your next booking</span></div></div>
+  </div>
+</section>
+
+<!-- ============================= OFFERS ============================= -->
+<section class="offers" id="offers">
+  <div class="container">
+    <div class="section-head row-head">
+      <div>
+        <p class="eyebrow" data-i18n="offers_eyebrow">Coupons &amp; deals</p>
+        <h2 data-i18n="offers_title">Offers for you</h2>
+      </div>
+      <div class="filter-tabs" id="offerTabs" role="tablist" aria-label="Offer category">
+        <button class="f-tab active" data-cat="all" role="tab" aria-selected="true">All</button>
+        <button class="f-tab" data-cat="flights" role="tab" aria-selected="false">Flights</button>
+        <button class="f-tab" data-cat="hotels" role="tab" aria-selected="false">Hotels</button>
+        <button class="f-tab" data-cat="holidays" role="tab" aria-selected="false">Holidays</button>
+        <button class="f-tab" data-cat="trains" role="tab" aria-selected="false">Trains</button>
+        <button class="f-tab" data-cat="buses" role="tab" aria-selected="false">Bus &amp; cabs</button>
+      </div>
+    </div>
+    <div class="offer-rail" id="offerRail"></div>
+  </div>
+</section>
+
+<!-- ============================= EXPLORE INDIA ============================= -->
+<section class="destinations" id="explore">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="explore_eyebrow">Where to next</p>
+      <h2 data-i18n="explore_title">Explore Incredible India</h2>
+      <p data-i18n="explore_sub">Thirty-plus stamps for your passport, from Himalayan passes to Andaman reefs. Tap a stamp for the best season, how to get there and what to eat.</p>
+    </div>
+    <div class="theme-chips" id="themeChips" role="toolbar" aria-label="Filter by theme"></div>
+    <div class="dest-grid" id="destGrid"></div>
+    <div class="center-row"><button class="btn btn-outline-ink" id="destMore">Show all destinations</button></div>
+  </div>
+</section>
+
+<!-- ============================= WEEKEND GETAWAYS ============================= -->
+<section class="getaways" id="getaways">
+  <div class="container">
+    <div class="section-head row-head">
+      <div>
+        <p class="eyebrow">Within 450 km by road</p>
+        <h2>Weekend getaways from <label class="inline-select" for="getawayCity"><span class="sr-only">your city</span><select id="getawayCity"></select></label></h2>
+      </div>
+      <p class="muted small">Distances are approximate road kilometres.</p>
+    </div>
+    <div class="getaway-list" id="getawayList"></div>
+  </div>
+</section>
+
+<!-- ============================= HOLIDAY PACKAGES ============================= -->
+<section class="packages" id="holidays">
+  <div class="container">
+    <div class="section-head row-head">
+      <div>
+        <p class="eyebrow" data-i18n="pkg_eyebrow">Fares &amp; itineraries</p>
+        <h2 data-i18n="pkg_title">Holiday packages</h2>
+        <p data-i18n="pkg_sub">Stays, transfers and sightseeing included. Pay in easy EMIs on packages above ₹10,000.</p>
+      </div>
+    </div>
+    <div class="pkg-toolbar">
+      <div class="filter-tabs" id="pkgTabs" role="tablist" aria-label="Package type">
+        <button class="f-tab active" data-pf="all" role="tab" aria-selected="true">All</button>
+        <button class="f-tab" data-pf="india" role="tab" aria-selected="false">India</button>
+        <button class="f-tab" data-pf="international" role="tab" aria-selected="false">International</button>
+        <button class="f-tab" data-pf="honeymoon" role="tab" aria-selected="false">Honeymoon</button>
+        <button class="f-tab" data-pf="spiritual" role="tab" aria-selected="false">Pilgrimage</button>
+        <button class="f-tab" data-pf="adventure" role="tab" aria-selected="false">Adventure</button>
+        <button class="f-tab" data-pf="weekend" role="tab" aria-selected="false">Weekend</button>
+      </div>
+      <label class="sort-select" for="pkgSort">Sort
+        <select id="pkgSort"><option value="pop">Popular</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="short">Shortest first</option></select>
+      </label>
+    </div>
+    <p class="filter-note" id="pkgNote" hidden></p>
+    <div class="packages-grid" id="packagesGrid"></div>
+  </div>
+</section>
+
+<!-- ============================= FESTIVALS ============================= -->
+<section class="festivals" id="festivals">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow on-dark" data-i18n="fest_eyebrow">Plan around a mela</p>
+      <h2 data-i18n="fest_title">Festival calendar</h2>
+      <p data-i18n="fest_sub">Many dates follow the lunar calendar and shift every year, so months are a guide. Book early: festival weeks sell out.</p>
+    </div>
+    <div class="month-strip" id="monthStrip" role="tablist" aria-label="Month"></div>
+    <div class="fest-grid" id="festGrid"></div>
+  </div>
+</section>
+
+<!-- ============================= TOOLS ============================= -->
+<section class="tools" id="tools">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="tools_eyebrow">Before you go</p>
+      <h2 data-i18n="tools_title">Travel tools</h2>
+    </div>
+    <div class="tools-grid">
+      <form class="tool-card" id="pnrForm" novalidate>
+        <h3><svg class="ic"><use href="#i-train"/></svg> PNR &amp; booking status</h3>
+        <p class="muted small">Look up any train PNR or Wanderlust booking ID made on this site.</p>
+        <div class="field light"><label for="pnrInput">10-digit PNR or booking ID</label><input id="pnrInput" inputmode="numeric" placeholder="e.g. 4521983067 or WL-…" autocomplete="off"></div>
+        <button class="btn btn-ink" type="submit">Check status</button>
+        <div class="tool-out" id="pnrOut" aria-live="polite"></div>
+      </form>
+      <form class="tool-card" id="budgetForm" novalidate>
+        <h3><svg class="ic"><use href="#i-calendar"/></svg> Trip budget planner</h3>
+        <div class="two-col">
+          <div class="field light"><label for="bdDest">Destination</label><select id="bdDest"></select></div>
+          <div class="field light"><label for="bdDays">Days</label><input type="number" id="bdDays" min="1" max="30" value="5"></div>
+          <div class="field light"><label for="bdPeople">Travellers</label><input type="number" id="bdPeople" min="1" max="20" value="2"></div>
+          <div class="field light"><label for="bdStyle">Travel style</label><select id="bdStyle"><option value="0.6">Budget / backpacker</option><option value="1" selected>Comfort (3★)</option><option value="1.9">Luxury (5★)</option></select></div>
+        </div>
+        <div class="tool-out" id="budgetOut" aria-live="polite"></div>
+      </form>
+      <form class="tool-card" id="emiForm" novalidate>
+        <h3><svg class="ic"><use href="#i-forex"/></svg> EMI calculator</h3>
+        <div class="two-col">
+          <div class="field light"><label for="emiAmt">Trip cost (₹)</label><input type="number" id="emiAmt" min="10000" step="1000" value="60000"></div>
+          <div class="field light"><label for="emiTenure">Tenure</label><select id="emiTenure"><option value="3">3 months · No-cost</option><option value="6" selected>6 months · No-cost</option><option value="9">9 months · 13% p.a.</option><option value="12">12 months · 14% p.a.</option></select></div>
+        </div>
+        <div class="tool-out" id="emiOut" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= GUIDES ============================= -->
+<section class="guides" id="guides">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="guides_eyebrow">Read before you pack</p>
+      <h2 data-i18n="guides_title">Travel guides</h2>
+    </div>
+    <div class="guide-grid" id="guideGrid"></div>
+  </div>
+</section>
+
+<!-- ============================= REVIEWS ============================= -->
+<section class="testimonials" id="reviews">
+  <div class="container">
+    <div class="section-head row-head">
+      <div>
+        <p class="eyebrow on-dark" data-i18n="rev_eyebrow">Postcards from travellers</p>
+        <h2 data-i18n="rev_title">What our guests say</h2>
+      </div>
+      <button class="btn btn-outline" id="writeReviewBtn">Write a review</button>
+    </div>
+    <div class="carousel">
+      <div class="carousel-track" id="carouselTrack" tabindex="0" aria-label="Reviews"></div>
+      <div class="carousel-controls">
+        <button class="car-btn" id="carPrev" aria-label="Previous review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <div class="car-dots" id="carDots"></div>
+        <button class="car-btn" id="carNext" aria-label="Next review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+      <p class="sample-note">Sample reviews shown for the demo. Reviews you submit appear first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section class="faq" id="faq">
+  <div class="container faq-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Help centre</p>
+      <h2 data-i18n="faq_title">Frequently asked questions</h2>
+      <p>Still stuck? Chat with us or call <strong class="mono">+91 74609 62727</strong>.</p>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ============================= CONTACT / CUSTOM TRIP ============================= -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <p class="eyebrow" data-i18n="contact_eyebrow">Get in touch</p>
+        <h2 data-i18n="contact_title">Plan a custom trip with us</h2>
+        <p class="muted contact-intro">Family reunions, school tours, corporate offsites, destination weddings or a parents' pilgrimage: tell us what you need and a trip expert calls back within 2 working hours.</p>
+        <div class="contact-map">
+          <svg viewBox="0 0 400 260" width="100%" role="img" aria-label="Illustrated route map from Delhi to Goa to Kochi">
+            <rect width="400" height="260" fill="var(--deep)"/>
+            <path d="M120,40 Q60,140 110,170 Q130,210 150,240" stroke="#C89B3C" stroke-width="2" stroke-dasharray="6 8" fill="none"/>
+            <circle cx="120" cy="40" r="6" fill="#E1572B"/><text x="132" y="44" fill="#F3ECDA" font-family="Space Mono, monospace" font-size="11">DEL</text>
+            <circle cx="110" cy="170" r="6" fill="#FBF7EC"/><text x="122" y="174" fill="#F3ECDA" font-family="Space Mono, monospace" font-size="11">GOI</text>
+            <circle cx="150" cy="240" r="6" fill="#FBF7EC"/><text x="162" y="244" fill="#F3ECDA" font-family="Space Mono, monospace" font-size="11">COK</text>
+            <path d="M300,60 l40,0 M300,80 l60,0 M300,100 l30,0" stroke="#F3ECDA" stroke-opacity=".25" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="contact-details">
+          <div class="contact-detail"><svg class="ic"><use href="#i-mail"/></svg> <span class="selectable">hello@wanderlustco.example</span><button class="copy-btn" data-copy="hello@wanderlustco.example">Copy</button></div>
+          <div class="contact-detail"><svg class="ic"><use href="#i-phone"/></svg> <span class="selectable">+91 74609 62727</span><button class="copy-btn" data-copy="+91 74609 62727">Copy</button></div>
+          <div class="contact-detail"><svg class="ic"><use href="#i-pin"/></svg> 2nd Floor, Example Tower, Connaught Place, New Delhi 110001</div>
+          <div class="contact-detail"><svg class="ic"><use href="#i-clock"/></svg> Office: Mon–Sat, 9:30 AM – 7:00 PM IST · Phone support 24×7</div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <span class="form-label">Custom trip enquiry</span>
+        <div id="contactFormFields">
+          <div class="two-col">
+            <div class="form-row"><label for="cname">Full name</label><input type="text" id="cname" autocomplete="name" placeholder="Your name"><span class="form-error" id="cnameError">Enter your name.</span></div>
+            <div class="form-row"><label for="cphone">Mobile number</label><div class="phone-input"><span>+91</span><input type="tel" id="cphone" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="10-digit mobile"></div><span class="form-error" id="cphoneError">Enter a 10-digit mobile number starting 6–9.</span></div>
+          </div>
+          <div class="form-row"><label for="cemail">Email</label><input type="email" id="cemail" autocomplete="email" placeholder="you@example.com"><span class="form-error" id="cemailError">Enter a valid email address.</span></div>
+          <div class="two-col">
+            <div class="form-row"><label for="ctype">Trip type</label><select id="ctype"><option>Family holiday</option><option>Honeymoon</option><option>Pilgrimage</option><option>Corporate / MICE</option><option>School or college group</option><option>Destination wedding</option><option>Adventure / trek</option></select></div>
+            <div class="form-row"><label for="cdest">Where to?</label><input type="text" id="cdest" list="holidayList" placeholder="e.g. Kerala"></div>
+            <div class="form-row"><label for="cdate">Approx. travel date</label><input type="date" id="cdate"></div>
+            <div class="form-row"><label for="cpax">Travellers</label><input type="number" id="cpax" min="1" max="500" value="4"></div>
+          </div>
+          <div class="form-row"><label for="cbudget">Budget per person</label><select id="cbudget"><option>Under ₹15,000</option><option selected>₹15,000 – ₹30,000</option><option>₹30,000 – ₹60,000</option><option>₹60,000 – ₹1,00,000</option><option>Above ₹1,00,000</option></select></div>
+          <div class="form-row"><label for="cmessage">Anything else?</label><textarea id="cmessage" placeholder="Hotel preference, food (Jain / veg), elderly travellers, wheelchair access…"></textarea></div>
+          <label class="check-line"><input type="checkbox" id="cwhatsapp" checked> Send updates on WhatsApp</label>
+          <button type="submit" class="btn btn-accent btn-block">Request a callback</button>
+        </div>
+        <div class="form-success" id="contactSuccess" hidden>
+          <span class="stamp-mark">RECEIVED</span>
+          <p id="contactSuccessText">Thanks! A trip expert will call you within 2 working hours.</p>
+          <button type="button" class="btn btn-outline-ink btn-sm" id="contactAgain">Send another enquiry</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= NEWSLETTER / APP ============================= -->
+<section class="newsletter">
+  <div class="container news-grid">
+    <div>
+      <h2>Get fare drops &amp; festival deals first</h2>
+      <p class="muted">One email a week. No spam, unsubscribe anytime.</p>
+    </div>
+    <form id="newsForm" class="news-form" novalidate>
+      <label for="newsEmail" class="sr-only">Email address</label>
+      <input type="email" id="newsEmail" placeholder="you@example.com" autocomplete="email">
+      <button class="btn btn-ink" type="submit">Subscribe</button>
+      <p class="form-msg" id="newsMsg" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <svg class="footer-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" height="40" aria-hidden="true">
+    <path d="M0,20 Q300,0 600,20 T1200,20" stroke="#C89B3C" stroke-width="2" stroke-dasharray="4 10" fill="none"/>
+  </svg>
+  <div class="container footer-top">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo"><span class="mark" aria-hidden="true"><svg class="ic"><use href="#i-plane"/></svg></span><span>Wanderlust<span class="logo-co">Co.</span></span></a>
+        <p>Thoughtfully planned trips across India and beyond, for travellers who'd rather explore than organise spreadsheets.</p>
+        <div class="pay-row" aria-label="Payment methods we accept"><span>UPI</span><span>RuPay</span><span>Visa</span><span>Mastercard</span><span>Net Banking</span><span>EMI</span></div>
+      </div>
+      <div class="footer-col">
+        <h4>Book</h4>
+        <ul>
+          <li><a href="#home" data-tab-link="flights">Flights</a></li>
+          <li><a href="#home" data-tab-link="hotels">Hotels &amp; homestays</a></li>
+          <li><a href="#home" data-tab-link="trains">Train tickets</a></li>
+          <li><a href="#home" data-tab-link="buses">Bus tickets</a></li>
+          <li><a href="#home" data-tab-link="cabs">Outstation cabs</a></li>
+          <li><a href="#holidays">Holiday packages</a></li>
+          <li><a href="#home" data-tab-link="visa">Visa &amp; forex</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular routes</h4>
+        <ul id="footerRoutes"></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><button class="link-btn" data-policy="about">About us</button></li>
+          <li><button class="link-btn" data-policy="cancellation">Cancellation &amp; refunds</button></li>
+          <li><button class="link-btn" data-policy="terms">Terms of use</button></li>
+          <li><button class="link-btn" data-policy="privacy">Privacy policy</button></li>
+          <li><button class="link-btn" data-policy="partner">List your property</button></li>
+          <li><button class="link-btn" data-policy="agent">Become a travel agent</button></li>
+          <li><button class="link-btn" data-policy="photos">Photo credits</button></li>
+          <li><a href="#faq">Help &amp; FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> Wanderlust Co. All rights reserved. GSTIN: 07XXXXX0000X1ZX</span>
+    <span>Demo website. Prices, inventory and payments are simulated.</span>
+  </div>
+</footer>
+
+<!-- ============================= MOBILE BOTTOM NAV ============================= -->
+<nav class="bottom-nav" aria-label="Quick links">
+  <a href="#home"><svg class="ic"><use href="#i-home"/></svg><span>Home</span></a>
+  <a href="#holidays"><svg class="ic"><use href="#i-palm"/></svg><span>Holidays</span></a>
+  <a href="#offers"><svg class="ic"><use href="#i-tag"/></svg><span>Offers</span></a>
+  <button type="button" id="bnTrips"><svg class="ic"><use href="#i-bag"/></svg><span>Trips</span></button>
+  <button type="button" id="bnAccount"><svg class="ic"><use href="#i-user"/></svg><span>Account</span></button>
+</nav>
+
+<!-- ============================= OVERLAYS ============================= -->
+<!-- Search results / checkout full-screen panel -->
+<div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle" hidden>
+  <div class="panel-head">
+    <button class="icon-btn panel-back" id="panelBack" aria-label="Back"><svg viewBox="0 0 24 24" class="ic" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="panel-title-wrap"><h2 id="panelTitle">Results</h2><p id="panelSub" class="panel-sub"></p></div>
+    <button class="icon-btn" id="panelClose" aria-label="Close"><svg class="ic"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="panel-body" id="panelBody"></div>
+</div>
+
+<!-- Generic modal -->
+<div class="modal-overlay" id="modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close"><svg class="ic"><use href="#i-close"/></svg></button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- Side drawer -->
+<div class="drawer-overlay" id="drawer" hidden>
+  <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="drawer-head"><h2 id="drawerTitle">Drawer</h2><button class="icon-btn" id="drawerClose" aria-label="Close"><svg class="ic"><use href="#i-close"/></svg></button></div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+</div>
+
+<!-- Chat assistant -->
+<button class="chat-fab" id="chatFab" aria-label="Chat with us" aria-expanded="false" aria-controls="chatBox"><svg class="ic"><use href="#i-chat"/></svg></button>
+<div class="chat-box" id="chatBox" role="dialog" aria-label="Chat with Wanderlust support" hidden>
+  <div class="chat-head"><div><strong>Wanderlust Sahayak</strong><small>Usually replies instantly</small></div><button class="icon-btn" id="chatClose" aria-label="Close chat"><svg class="ic"><use href="#i-close"/></svg></button></div>
+  <div class="chat-log" id="chatLog" aria-live="polite"></div>
+  <div class="chat-quick" id="chatQuick"></div>
+  <form class="chat-input" id="chatForm"><label for="chatText" class="sr-only">Message</label><input id="chatText" autocomplete="off" placeholder="Ask about refunds, baggage, PNR…"><button class="btn btn-accent btn-sm" type="submit">Send</button></form>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<datalist id="airportList"></datalist>
+<datalist id="cityList"></datalist>
+<datalist id="stationList"></datalist>
+<datalist id="holidayList"></datalist>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+<script src="booking.js"></script>
+<script src="checkout.js"></script>
+</body>
+</html>
